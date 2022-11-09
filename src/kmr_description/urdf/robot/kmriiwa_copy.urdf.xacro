@@ -4,7 +4,7 @@
 
   <xacro:include filename="$(find kmr_description)/urdf/iiwa14/materials.xacro" />
   <xacro:include filename="$(find kmr_description)/urdf/iiwa14/iiwa14.xacro"/>
-  <xacro:include filename="$(find kmr_description)/urdf/kmp200/kmp200.xacro"/>
+  <xacro:include filename="$(find kmr_description)/urdf/kmp200/kmp200_copy.xacro"/>
   <xacro:include filename="$(find kmr_description)/urdf/d435/_d435.urdf.xacro"/>
   <xacro:include filename="$(find kmr_description)/urdf/adapters/camera_adapter.urdf.xacro"/>
   <xacro:include filename="$(find kmr_description)/urdf/gripper/robotiq_gripper.urdf.xacro"/>
@@ -27,7 +27,7 @@
 
 
   <!--kmp200-->
-  <xacro:kmp200 robot_name="$(arg robot_name)"/>
+  <xacro:kmp200 robot_name="$(arg robot_name)" with_wheels="true"/>
 
 
   <!--riser flange-->
