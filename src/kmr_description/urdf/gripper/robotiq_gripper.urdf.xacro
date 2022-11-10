@@ -452,6 +452,15 @@
       <axis xyz="0 1 0" />
     </joint>
 
+    <!-- Manualy created joint and link to control end effector -->
+    <joint name="gripper_center_joint" type="fixed">
+      <origin xyz="0 0 0.1375" rpy="0 0 0" />
+      <parent link="gripper_base_link" />
+      <child link="gripper_center" />
+    </joint>
+
+    <link name="gripper_center" />
+
   </xacro:macro>
 
 </robot>
