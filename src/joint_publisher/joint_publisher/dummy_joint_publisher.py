@@ -15,23 +15,34 @@ class DummyJointPublisher(Node):
         # Create a JointState message
         self.joint_state = JointState()
 
-        self.joint_state.name = [
-            "panda_joint1",
-            "panda_joint2",
-            "panda_joint3",
-            "panda_joint4",
-            "panda_joint5",
-            "panda_joint6",
-            "panda_joint7",
-            "panda_finger_joint1",
-            "panda_finger_joint2",
+        # self.joint_state.name = [  # Omniverse tutorial demo: "7. ROS2 Joint Control: Extension Python Scripting"
+        #     "panda_joint1",
+        #     "panda_joint2",
+        #     "panda_joint3",
+        #     "panda_joint4",
+        #     "panda_joint5",
+        #     "panda_joint6",
+        #     "panda_joint7",
+        #     "panda_finger_joint1",
+        #     "panda_finger_joint2",
+        # ]
+
+        self.joint_state.name = [  # Heggem, Whal robot
+            'joint_a1',
+            'joint_a2',
+            'joint_a3',
+            'joint_a4',
+            'joint_a5',
+            'joint_a6',
+            'joint_a7',
         ]
 
         num_joints = len(self.joint_state.name)
 
         # make sure kit's editor is playing for receiving messages
         self.joint_state.position = np.array([0.0] * num_joints, dtype=np.float64).tolist()
-        self.default_joints = [0.0, -1.16, -0.0, -2.3, -0.0, 1.6, 1.1, 0.4, 0.4]
+        # self.default_joints = [0.0, -1.16, -0.0, -2.3, -0.0, 1.6, 1.1, 0.4, 0.4]  # Isaac sim ros demo
+        self.default_joints = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]  # Heggem, Whal robot
 
         # limiting the movements to a smaller range (this is not the range of the robot, just the range of the movement
         self.max_joints = np.array(self.default_joints) + 0.5

@@ -10,7 +10,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('kmr_description')
-    default_model_path = urdf_tutorial_path / 'urdf/robot/kmriiwa_copy.urdf.xacro'
+    default_model_path = urdf_tutorial_path / 'urdf/robot/kmriiwa.urdf.xacro'
     # default_model_path = urdf_tutorial_path / 'urdf/gripper/robotiq_gripper.urdf.xacro'
     # default_model_path = urdf_tutorial_path / 'urdf/d435/_d435.urdf.xacro'
     default_rviz_config_path = urdf_tutorial_path / 'rviz/urdf.rviz'

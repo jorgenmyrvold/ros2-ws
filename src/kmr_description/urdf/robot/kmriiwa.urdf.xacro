@@ -67,35 +67,31 @@
     <origin xyz="0 0 0.005" rpy="0 0 0" />
   </xacro:gripper>
 
-
+  <!-- THese values has to be tuned to match the pysical robot -->
   <!-- Cameras with adapters -->
   <xacro:camera_adapter parent="$(arg robot_name)_base_top_link" camera_position="left">
-    <origin xyz="0 0.275 0.0125" rpy="0 0 0"/>
+    <origin xyz="0 0.275 0" rpy="0 0 0"/>
   </xacro:camera_adapter>
 
   <xacro:camera_adapter parent="$(arg robot_name)_base_top_link" camera_position="right">
-    <origin xyz="0 -0.275 0.0125" rpy="0 0 0"/>
+    <origin xyz="0 -0.275 0.05" rpy="0 0 0"/>
   </xacro:camera_adapter>
 
   <xacro:sensor_d435 parent="left_camera_adapter" name="camera_left" use_nominal_extrinsics="true">
-    <origin xyz="0 0 0" rpy="0 0 ${M_PI/2}" />
+    <origin xyz="0 0 0.005" rpy="0 0 ${M_PI/2}" />
   </xacro:sensor_d435>
 
   <xacro:sensor_d435 parent="right_camera_adapter" name="camera_right" use_nominal_extrinsics="true">
-    <origin xyz="0 0 0" rpy="0 0 ${-M_PI/2}" />
+    <origin xyz="0 0 0.005" rpy="0 0 ${-M_PI/2}" />
   </xacro:sensor_d435>
 
   <xacro:sensor_d435 parent="$(arg robot_name)_base_top_link" name="camera_front" use_nominal_extrinsics="true">
-    <origin xyz="0.5 0 0" rpy="0 0 0" />
+    <origin xyz="0.5 0 -0.0075" rpy="0 0 0" />
   </xacro:sensor_d435>
 
   <xacro:sensor_d435 parent="gripper_adapter" name="camera_manipulator" use_nominal_extrinsics="true">
-    <origin xyz="0 0.03 0" rpy="0 ${-M_PI/2} ${-M_PI/2}" />
+    <origin xyz="0 0.035 0" rpy="0 ${-M_PI/2} ${-M_PI/2}" />
   </xacro:sensor_d435>
-
- 
-  <!-- Optional custom includes such as grippers, sensors, etc... -->
-  <xacro:include filename="$(arg robot_extras)"/>
 
 
 </robot>
