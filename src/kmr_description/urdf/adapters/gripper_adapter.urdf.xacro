@@ -24,12 +24,5 @@
       </visual>
     </link>
 
-    <joint name="joint_adapter_gripper" type="fixed">
-      <origin rpy="0 0 0" xyz="0 0 0.005"/>
-      <parent link="gripper_adapter"/>
-      <child link="gripper_base_link"/>
-    </joint>
-
-
   </xacro:macro>
 </robot>

@@ -67,14 +67,15 @@
     <origin xyz="0 0 0.005" rpy="0 0 0" />
   </xacro:gripper>
 
-  <!-- THese values has to be tuned to match the pysical robot -->
+
   <!-- Cameras with adapters -->
+  <!-- These values has to be tuned to match the pysical robot -->
   <xacro:camera_adapter parent="$(arg robot_name)_base_top_link" camera_position="left">
     <origin xyz="0 0.275 0" rpy="0 0 0"/>
   </xacro:camera_adapter>
 
   <xacro:camera_adapter parent="$(arg robot_name)_base_top_link" camera_position="right">
-    <origin xyz="0 -0.275 0.05" rpy="0 0 0"/>
+    <origin xyz="0 -0.275 0" rpy="0 0 0"/>
   </xacro:camera_adapter>
 
   <xacro:sensor_d435 parent="left_camera_adapter" name="camera_left" use_nominal_extrinsics="true">
