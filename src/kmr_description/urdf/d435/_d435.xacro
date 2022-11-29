@@ -7,11 +7,12 @@ Copyright(c) 2022 Intel Corporation. All Rights Reserved
 This is the URDF model for the Intel RealSense 430 camera, in its
 aluminum peripherial evaluation case.
 -->
+<!-- From https://github.com/IntelRealSense/realsense-ros -->
 
 <robot name="sensor_d435" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Includes -->
-  <xacro:include filename="$(find kmr_description)/urdf/d435/_materials.urdf.xacro" />
-  <xacro:include filename="$(find kmr_description)/urdf/d435/_usb_plug.urdf.xacro" />
+  <xacro:include filename="$(find kmr_description)/urdf/d435/_materials.xacro" />
+  <xacro:include filename="$(find kmr_description)/urdf/d435/_usb_plug.xacro" />
 
   <xacro:macro name="sensor_d435" params="parent *origin name:=camera use_nominal_extrinsics:=false add_plug:=false use_mesh:=true">
 

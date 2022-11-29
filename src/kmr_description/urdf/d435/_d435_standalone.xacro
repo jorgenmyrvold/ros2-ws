@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot name="d435" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find kmr_description)/urdf/d435/_d435.xacro"/>
+
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+  <link name="base" />
+
+  <xacro:sensor_d435 parent="base" name="camera_left" use_nominal_extrinsics="true">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:sensor_d435>
+
+
+</robot>

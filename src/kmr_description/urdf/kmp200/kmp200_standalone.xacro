@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="kmp200" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find kmr_description)/urdf/kmp200/kmp200.xacro"/>
+  <xacro:kmp200 robot_name="kmp200" with_wheels="true"/>
+
+</robot>
