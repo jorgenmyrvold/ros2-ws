@@ -30,7 +30,7 @@
 
 
   <!--kmp200-->
-  <xacro:kmp200 robot_name="$(arg robot_name)" with_wheels="true"/>
+  <xacro:kmp200 robot_name="$(arg robot_name)" with_wheels="false"/>
 
 
   <!--riser flange-->
