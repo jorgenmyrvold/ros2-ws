@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kmr_description
+    relative_path: urdf/robot/kmr.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/kmr.srdf
+  CONFIG:
+    author_name: Jørgen Myrvold
+    author_email: jorgeum@stud.ntnu.no
+    generated_timestamp: 1669996256

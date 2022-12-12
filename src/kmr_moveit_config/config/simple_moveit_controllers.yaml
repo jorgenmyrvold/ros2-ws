@@ -1,0 +1,13 @@
+controller_list:
+  - name: arm_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - kmr_joint_1
+      - kmr_joint_2
+      - kmr_joint_3
+      - kmr_joint_4
+      - kmr_joint_5
+      - kmr_joint_6
+      - kmr_joint_7
