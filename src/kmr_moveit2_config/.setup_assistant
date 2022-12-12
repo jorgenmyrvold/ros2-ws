@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: kmr_description
+    relative_path: urdf/robot/kmr_wo_wheels.urdf
+  srdf:
+    relative_path: config/kmr.srdf
+  package_settings:
+    author_name: Jørgen Myrvold
+    author_email: jorgeum@stud.ntnu.no
+    generated_timestamp: 1670860304

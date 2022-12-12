@@ -1,0 +1,11 @@
+# Default initial positions for kmr's ros2_control fake system
+
+initial_positions:
+  gripper_finger_joint: 0
+  kmr_joint_1: 0
+  kmr_joint_2: 0
+  kmr_joint_3: 0
+  kmr_joint_4: 0
+  kmr_joint_5: 0
+  kmr_joint_6: 0
+  kmr_joint_7: 0
